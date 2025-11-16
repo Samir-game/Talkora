@@ -13,7 +13,7 @@ const streamClient=StreamChat.getInstance(apiKey, apiSecret);
 
 export const upsertStreamUser=async(userData)=>{
   try {
-    await streamClient.upsertUsers([userData]);//creating account on stream
+    await streamClient.upsertUsers([userData]);//creating/updating account on stream
     return userData;
 
   } catch (error) {
