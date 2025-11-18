@@ -5,6 +5,7 @@ import toast from "react-hot-toast";
 import { completeOnboarding } from "../lib/api";
 import { LoaderIcon, MapPinIcon, ShipWheelIcon, ShuffleIcon } from "lucide-react";
 import { LANGUAGES } from "../constants/index.js";
+import { CameraIcon } from "lucide-react";
 
 const OnboardingPage = () => {
   const { authUser } = useAuthUser();

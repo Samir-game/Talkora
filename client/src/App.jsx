@@ -4,13 +4,13 @@ import HomePage from "./pages/HomePage.jsx";
 import SignUpPage from "./pages/SignUpPage.jsx";
 import LoginPage from "./pages/LoginPage.jsx";
 import NotificationPage from "./pages/NotificationPage.jsx";
-import CallPage from "./pages/CallPage.jsx";
 import ChatPage from "./pages/ChatPage.jsx";
 import OnboardingPage from "./pages/OnboardingPage.jsx";
+import Layout from './components/Layout.jsx';
 
 import useAuthUser from "./hooks/useAuthUser.js";
-
-import { Toaster } from "react-hot-toast";
+import {useThemeStore} from "./store/useThemeStore.js";
+import {Toaster} from "react-hot-toast";
 
 
 
@@ -19,9 +19,10 @@ const App = () => {
   const { authUser } = useAuthUser();
   const isOnboarded = authUser?.isOnboarded;
   const isAuthenticated = Boolean(authUser);
+    const { theme } = useThemeStore();
 
   return (
-     <div className="h-screen" >
+     <div className="h-screen"  data-theme={theme} >
       <Routes>
         <Route
           path="/"
@@ -59,17 +60,6 @@ const App = () => {
             )
           }
         />
-        <Route
-          path="/call/:id"
-          element={
-            isAuthenticated && isOnboarded ? (
-              <CallPage />
-            ) : (
-              <Navigate to={!isAuthenticated ? "/login" : "/onboarding"} />
-            )
-          }
-        />
-
         <Route
           path="/chat/:id"
           element={
