@@ -14,7 +14,7 @@ https://talkora-9x17.onrender.com
 ## 📌 Key Features
 
 - 🔐 User Authentication with secure HTTP-only cookie-based sessions
-- 💬 Real-time messaging using Socket.io
+- 💬 Real-time messaging using Stream
 - 👥 One-to-One Private Chat System
 - 📂 Conversation Management
 - 🗑️ Delete Messages / Conversations
