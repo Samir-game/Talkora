@@ -20,7 +20,7 @@ https://talkora-9x17.onrender.com
 - 🗑️ Delete Messages / Conversations
 - 🟢 Online / Offline User Status
 - ⚡ Optimized REST APIs
-- 📱 Fully Responsive UI for all devices
+- 📱 Fully Responsive UI
 
 ---
 
